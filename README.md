@@ -1,2 +1,3 @@
 # projectblack
-new website to help support businesses of color
+new website to help streamers grow and become a bigger community 
+
