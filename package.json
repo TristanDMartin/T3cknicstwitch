@@ -1,0 +1,20 @@
+{
+  "name": "projectblack",
+  "version": "1.0.0",
+  "description": "new website to help streamers grow and become a bigger community",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TristanDMartin/projectblack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TristanDMartin/projectblack/issues"
+  },
+  "homepage": "https://github.com/TristanDMartin/projectblack#readme"
+}
