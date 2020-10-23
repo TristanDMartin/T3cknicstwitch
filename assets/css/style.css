@@ -824,11 +824,22 @@ section {
 }
 
 /*--------------------------------------------------------------
-# twitch
+# twitch testing for browser
 --------------------------------------------------------------*/
-#twitch {
+#twitchs {
   align-content: center;
+  /* border: 5px solid purple; */
+  border-right-width: 5px;
 }
+
+#streams {
+  /* border: 5px solid purple;
+  border-right-width: 5px; */
+  /* flex: 10 1000 100%; */
+}
+
+
+
 
 
 

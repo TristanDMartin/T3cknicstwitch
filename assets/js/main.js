@@ -1,9 +1,4 @@
-/**
-* Template Name: Gp - v2.1.0
-* Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 !(function($) {
   "use strict";
 
@@ -225,3 +220,48 @@
   });
 
 })(jQuery);
+
+var options = { width: '620', height: '378', channel: 't3cknics' };
+   var id = 'player-' + 't3cknics';
+   $('#streams').append('<div id="' + id + '"></div>');
+   var player = new Twitch.Player(id, options);
+   player.setMuted(false);
+   player.setVolume(1);
+
+   player.addEventListener(Twitch.Player.ONLINE, function () {
+    $('#event-list').append('<li style="color: darkgreen;">[' + new Date($.now()).toISOString() + '][' + 'T3cknics' + '][VISIBLE] ONLINE</li>');
+});
+player.addEventListener(Twitch.Player.OFFLINE, function () {
+    $('#event-list').append('<li style="color: darkred;">[' + new Date($.now()).toISOString() + '][' + 'T3cknics' + '][VISIBLE] OFFLINE</li>');
+});
+player.addEventListener(Twitch.Player.PAUSE, function () {
+    $('#event-list').append('<li style="color: darkgoldenrod;">[' + new Date($.now()).toISOString() + '][' + 'T3cknics' + '][VISIBLE] PAUSE</li>');
+});
+player.addEventListener(Twitch.Player.ENDED, function () {
+    $('#event-list').append('<li style="color: darkred;">[' + new Date($.now()).toISOString() + '][' + 'T3cknics' + '][VISIBLE] ENDED</li>');
+});
+player.addEventListener(Twitch.Player.PLAY, function () {
+    $('#event-list').append('<li style="color: darkgreen;">[' + new Date($.now()).toISOString() + '][' + 'T3cknics' + '][VISIBLE] PLAY</li>');
+});
+player.addEventListener(Twitch.Player.READY, function () {
+    $('#event-list').append('<li style="color: darkgreen;">[' + new Date($.now()).toISOString() + '][' + 'T3cknics' + '][VISIBLE] READY</li>');
+});
+
+var acc = document.getElementsByClassName("accordiononly");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
